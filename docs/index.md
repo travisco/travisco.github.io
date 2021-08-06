@@ -33,8 +33,7 @@ Amanda Aguilera
 Lester Fichtner
 
 #### Offering & Delivery Managers
-Kathleen DeLira
-Melissa Shea
+Kathleen DeLira & Melissa Shea
 
 #### Technical Lead
 Mike Fisher
