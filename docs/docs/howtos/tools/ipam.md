@@ -3,6 +3,7 @@ layout: default
 title: Using IPAM
 description: "Provides details about how you might use IPAM in the COS LB squad."
 parent: Tools
+grand_parent: How To's
 ---
 
 # Focus on writing good documentation

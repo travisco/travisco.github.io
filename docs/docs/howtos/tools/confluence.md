@@ -3,6 +3,7 @@ layout: default
 title: LB Squad Confluence***
 description: "Provides details about how you can request access hub access."
 parent: Tools
+grand_parent: How To's
 ---
 
 # Focus on writing good documentation
