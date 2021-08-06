@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Make Access Request's
+title: Access Request's
 nav_order: 3
 description: "Provides details about how you can request access hub access."
 parent: How To's

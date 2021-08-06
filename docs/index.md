@@ -14,7 +14,7 @@ permalink: /
 Robert Cabrera
 {: .fs-6 .fw-300 }
 
-[Bluepages](https://w3.ibm.com/bluepages/profile.html?uid=2G7400897){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [Confluence](https://confluence.softlayer.local/display/STORAGE/Load+Balancing+Squad){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Blue Pages - Rob C.](https://w3.ibm.com/bluepages/profile.html?uid=2G7400897){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [Confluence - LB Squad](https://confluence.softlayer.local/display/STORAGE/Load+Balancing+Squad){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -44,18 +44,18 @@ Alex Allgood
 
 #### Squad Members
 
-Donald Richardson
-Arnold Lam
-Carlos Parodi
-Mounica Ghanta
-Travis Potter
-Daniel Steele
-Bhanu Prakash
-Bijesh Baidya
-Jahanavee Potturu
-Manjesh Gowda
-Pili Shanmukha Vinay
-Srijan Tuladhar
-Yugvir Singh
-Saurabh Maheshwari
-Sachin Kajekar
+Donald Richardson - 
+Arnold Lam - 
+Carlos Parodi - 
+Mounica Ghanta - 
+Travis Potter - 
+Daniel Steele - 
+Bhanu Prakash - 
+Bijesh Baidya - 
+Jahanavee Potturu - 
+Manjesh Gowda - 
+Pili Shanmukha Vinay - 
+Srijan Tuladhar - 
+Yugvir Singh - 
+Saurabh Maheshwari - 
+Sachin Kajekar - 
