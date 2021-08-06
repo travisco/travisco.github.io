@@ -7,7 +7,7 @@ permalink: /
 
 ---
 
-# IBM Cloud COS Load Balancer Squad
+# COS Load Balancer Squad Documentation
 {: .fs-9 }
 
 #### Manager

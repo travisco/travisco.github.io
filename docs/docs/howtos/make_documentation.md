@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Make a Documentaion Pages***
+title: Make a Documentaion Page
 nav_order: 2
 description: "Provides details about how you can structure documentation, create pages and guidelines to follow."
 parent: How To's

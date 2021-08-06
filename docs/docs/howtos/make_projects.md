@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Make A Project***
+title: Make A Project
 nav_order: 1
 description: "Provides details about how you can create a new project to be added to our documentation. "
 parent: How To's
