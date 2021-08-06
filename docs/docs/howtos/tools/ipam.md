@@ -1,23 +1,21 @@
 ---
 layout: default
-title: General
-nav_order: 1
-description: "General landing page for the COS Load Balancer Squad Documentation."
-permalink: /
-
+title: Using IPAM
+description: "Provides details about how you might use IPAM in the COS LB squad."
+parent: Tools
 ---
 
-# IBM Cloud COS Load Balancer Squad
+# Focus on writing good documentation
 {: .fs-9 }
 
-Manager: Robert Cabrera
+Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
 {: .fs-6 .fw-300 }
 
-[Bluepages](https://w3.ibm.com/bluepages/profile.html?uid=2G7400897){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [Confluence](https://confluence.softlayer.local/display/STORAGE/Load+Balancing+Squad){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/pmarsceill/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
-## Team Information
+## Getting started
 
 ### Dependencies
 
