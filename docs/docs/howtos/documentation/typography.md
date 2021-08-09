@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Typography
-parent: Documentation Style & Guidelines
+title: Tables - Typography
+parent: Document Formatting
+grand_parent: How To's
 ---
 
-# Typography Utilities
+# Tables - Typography
 {: .no_toc }
 
 ## Table of contents
@@ -12,6 +13,32 @@ parent: Documentation Style & Guidelines
 
 1. TOC
 {:toc}
+
+---
+
+# Tables
+
+Tables are responsive by default, allowing wide tables to have a horizontal scroll to access columns outside of the normal viewport.
+
+<div class="code-example" markdown="1">
+
+| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
+
+</div>
+```markdown
+| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
+```
+# Typography Utilities
 
 ---
 
@@ -157,18 +184,11 @@ By default text is justified left. Use these `text-` classes to override setting
 
 
 # Typography for UI Components
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
 
 ---
 
 ## Font stack
-
+{: .no_toc }
 By default, Just the Docs uses a native system font stack for sans-serif fonts:
 
 ```scss
@@ -192,7 +212,7 @@ abcdefghijklmnopqrstuvwxyz
 ---
 
 ## Responsive type scale
-
+{: .no_toc }
 Just the Docs uses a responsive type scale that shifts depending on the viewport size.
 
 | Selector              | Small screen size `font-size`    | Large screen size `font-size` |
@@ -207,31 +227,8 @@ Just the Docs uses a responsive type scale that shifts depending on the viewport
 
 ---
 
-## Headings
-
-Headings are rendered like this:
-
-<div class="code-example">
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-</div>
-```markdown
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
-```
-
----
-
 ## Body text
-
+{: .no_toc }
 Default body text is rendered like this:
 
 <div class="code-example" markdown="1">
@@ -244,7 +241,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 ---
 
 ## Inline elements
-
+{: .no_toc }
 <div class="code-example" markdown="1">
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
@@ -259,6 +256,7 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 ---
 
 ## Typographic Utilities
-
+{: .no_toc }
 There are a number of specific typographic CSS classes that allow you to override default styling for font size, font weight, line height, and capitalization.
 
+[Original Link](https://github.com/pmarsceill/just-the-docs/blob/master/docs/index-test.md){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
