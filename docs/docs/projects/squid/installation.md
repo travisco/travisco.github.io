@@ -91,13 +91,28 @@ grand_parent: Projects
 ```
 
 [basic_ldap_auth]({{ site.baseurl }}{% link assets/files/basic_ldap_auth %}){: .btn .btn-green }
-7. Load squid into the system. 
+
+1. Create a password and store it in the squid configuration folder.
 
 ```bash
-# update-rc.d squid defaults
+# touch /etc/squid/ldap_password
 
-# systemctl start squid
+# vi /etc/squid/ldap_password
+
+# chmod 644 /etc/squid/ldap_password
 ```
+
+1. Upload this squid configuration to the server and put it in the location listed below, **Rename file to squid.conf
+
+[Squid.conf Bare-metal]({{ site.baseurl }}{% link assets/files/squid-baremetal.conf %}){: .btn .btn-yellow .mr-2 } [Squid.conf Container]({{ site.baseurl }}{% link assets/files/squid-container.conf %}){: .btn .btn-yellow }
+
+```bash
+# /etc/squid/
+
+# cp /tmp/squid-baremetal.conf /etc/squid/squid.conf
+```
+
+This configuration file contains the needed
 
 ##### Related Links
 
