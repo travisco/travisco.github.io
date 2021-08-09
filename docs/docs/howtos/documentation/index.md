@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Documentation Formatting
+title: Document Formatting
 nav_order: 1
 description: "Provides details about how you can structure documentation, create pages and guidelines to follow for coding structure."
 parent: How To's
