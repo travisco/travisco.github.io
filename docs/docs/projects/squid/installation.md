@@ -17,21 +17,81 @@ grand_parent: Projects
 
 ---
 
-## Installation
+### Installation
 
 
-### Bare-metal
+#### Bare-metal
 {: .text-gamma }
 
 #### Prerequisites
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum. Pharetra et ultrices neque ornare aenean euismod. Duis at consectetur lorem donec massa. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Enim eu turpis egestas pretium aenean. Ut sem viverra aliquet eget sit amet. Consectetur a erat nam at lectus. Mattis aliquam faucibus purus in massa. Urna duis convallis convallis tellus id interdum velit. Sociis natoque penatibus et magnis dis parturient montes nascetur. Aliquam etiam erat velit scelerisque. Amet aliquam id diam maecenas ultricies. Interdum varius sit amet mattis vulputate. Netus et malesuada fames ac turpis egestas. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Lobortis mattis aliquam faucibus purus in massa. Tristique sollicitudin nibh sit amet.
+* Operating System: Debian 10(Buster) with the latest at 8/1/2021
+* User created for squid, best practice is to use squid.
 
-Nunc eget lorem dolor sed viverra. Pellentesque id nibh tortor id aliquet lectus. Mauris a diam maecenas sed enim ut sem viverra aliquet. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Natoque penatibus et magnis dis. Sapien pellentesque habitant morbi tristique senectus et. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Ipsum faucibus vitae aliquet nec ullamcorper sit amet. Nunc congue nisi vitae suscipit tellus. A erat nam at lectus urna duis convallis convallis. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Turpis tincidunt id aliquet risus feugiat in ante. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Odio tempor orci dapibus ultrices in iaculis nunc sed.
-
-Amet consectetur adipiscing elit ut aliquam purus sit amet. Bibendum arcu vitae elementum curabitur vitae nunc. Donec ac odio tempor orci. Vitae nunc sed velit dignissim sodales. Nunc pulvinar sapien et ligula ullamcorper malesuada. Egestas fringilla phasellus faucibus scelerisque eleifend. Sit amet cursus sit amet dictum sit. Placerat in egestas erat imperdiet sed euismod. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Semper quis lectus nulla at. Risus at ultrices mi tempus imperdiet nulla malesuada. In ornare quam viverra orci sagittis eu volutpat odio. Dignissim sodales ut eu sem integer vitae. Lectus mauris ultrices eros in. Sagittis eu volutpat odio facilisis mauris sit amet massa. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus. At ultrices mi tempus imperdiet nulla malesuada.
 
 ---
+
+#### Install Squid & Dependencies
+
+1. Download the version of squid you want and store it in the directory. 
+
+```bash
+# cd /opt
+
+# wget http://www.squid-cache.org/Versions/v5/squid-5.1-20210804-r1f9e52827.tar.gz
+
+# tar -xvf squid-5.1-20210804-r1f9e52827.tar.gz
+```
+
+2. Assuming you used version 5.1, change into the new directory created from un tarring the file. 
+
+```bash
+# cd squid-5.1/
+
+# apt-get install build-essential libssl-dev libffi-dev python3-dev cargo
+
+# ./configure --prefix=/usr --localstatedir=/var --libexecdir=${prefix}/lib/squid --datadir=${prefix}/share/squid --sysconfdir=/etc/squid --with-default-user=proxy --with-logdir=/var/log --with-pidfile=/var/run/squid.pid --with-openssl --enable-ssl-crtd
+```
+
+3. Next we will create the self sign certification to use with openssl,
+```bash
+# openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -keyout bump.key -out bump.crt
+
+# openssl x509 -in bump.crt -outform DER -out bump.der
+
+# openssl dhparam -outform PEM -out /etc/squid/bump_dhparam.pem 4096
+
+# chown proxy:proxy /etc/squid/bump*
+
+# chmod 400 /etc/squid/bump*
+```
+
+4. Create and initalize the DB for storing the certificetes
+
+```bash
+# mkdir -p /var/lib/squid
+
+# rm -rf /var/lib/squid/ssl_db
+
+# /usr/lib/squid/security_file_certgen -c -s /var/lib/squid/ssl_db -M 20MB
+
+# chown -R proxy:proxy /var/lib/squid
+```
+
+5. The squid service was not in the system so I could not start it or stop it, so I found this file and made a minor adjustment to the path location for squid (add '/usr/lib' to the end of the path list),
+
+```bash
+/etc/init.d/squid
+```
+
+[Init.d Squid File](https://www.apt-browse.org/browse/ubuntu/xenial/main/amd64/squid/3.5.12-1ubuntu7/file/etc/init.d/squid){: .btn .btn-green }
+
+I did also have to add in the basic_ldap_auth to the server as well.
+
+[basic_ldap_auth]({{ site.baseurl }}{% link assets/files/basic_ldap_auth %}){: .btn .btn-green }
+
+Then I issued these commands to load it into the system.
+
 
 ### Container
 {: .text-gamma }
