@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Archives
-nav_order: 5
+nav_order: 7
 description: "Project Archives."
 has_children: true
 ---
