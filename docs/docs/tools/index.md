@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Tools
+nav_order: 4
 description: "Articles for commonlly used tools in the COS LB Squad."
 has_children: true
 ---

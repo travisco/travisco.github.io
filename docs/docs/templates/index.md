@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Templates
-nav_order: 6
+nav_order: 7
 description: "Templates for the COS LB Squad"
 has_children: true
 ---

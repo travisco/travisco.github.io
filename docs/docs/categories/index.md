@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Categories
-nav_order: 4
+nav_order: 5
 description: "Categories for documentation."
 has_children: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: How To's
-nav_order: 5
+nav_order: 6
 description: "Common how to articles needed for the COS LB squad"
 has_children: true
 ---
