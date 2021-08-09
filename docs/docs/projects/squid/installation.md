@@ -17,8 +17,13 @@ grand_parent: Projects
 
 ---
 
+## Installation
 
-## Prerequisites
+
+### Bare-metal
+{: .text-gamma }
+
+#### Prerequisites
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum. Pharetra et ultrices neque ornare aenean euismod. Duis at consectetur lorem donec massa. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Enim eu turpis egestas pretium aenean. Ut sem viverra aliquet eget sit amet. Consectetur a erat nam at lectus. Mattis aliquam faucibus purus in massa. Urna duis convallis convallis tellus id interdum velit. Sociis natoque penatibus et magnis dis parturient montes nascetur. Aliquam etiam erat velit scelerisque. Amet aliquam id diam maecenas ultricies. Interdum varius sit amet mattis vulputate. Netus et malesuada fames ac turpis egestas. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Lobortis mattis aliquam faucibus purus in massa. Tristique sollicitudin nibh sit amet.
 
@@ -28,22 +33,15 @@ Amet consectetur adipiscing elit ut aliquam purus sit amet. Bibendum arcu vitae 
 
 ---
 
-## Installation
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Volutpat consequat mauris nunc congue nisi vitae. Quis blandit turpis cursus in hac habitasse. Vitae proin sagittis nisl rhoncus. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. In nulla posuere sollicitudin aliquam ultrices sagittis orci. Ultricies mi quis hendrerit dolor magna. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Lectus sit amet est placerat in egestas. Massa tincidunt nunc pulvinar sapien et ligula. Eu mi bibendum neque egestas congue quisque egestas diam in. Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Felis eget nunc lobortis mattis. Nulla aliquet enim tortor at auctor urna nunc. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ultrices dui sapien eget mi proin sed libero. Dictum sit amet justo donec. Massa tempor nec feugiat nisl pretium fusce.
-
-
-### Bare-metal
+### Container
 {: .text-gamma }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Volutpat consequat mauris nunc congue nisi vitae. Quis blandit turpis cursus in hac habitasse. Vitae proin sagittis nisl rhoncus. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. In nulla posuere sollicitudin aliquam ultrices sagittis orci. Ultricies mi quis hendrerit dolor magna. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Lectus sit amet est placerat in egestas. Massa tincidunt nunc pulvinar sapien et ligula. Eu mi bibendum neque egestas congue quisque egestas diam in. Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Felis eget nunc lobortis mattis. Nulla aliquet enim tortor at auctor urna nunc. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ultrices dui sapien eget mi proin sed libero. Dictum sit amet justo donec. Massa tempor nec feugiat nisl pretium fusce.
-
-### Container
+#### Prerequisites
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Volutpat consequat mauris nunc congue nisi vitae. Quis blandit turpis cursus in hac habitasse. Vitae proin sagittis nisl rhoncus. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. In nulla posuere sollicitudin aliquam ultrices sagittis orci. Ultricies mi quis hendrerit dolor magna. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Lectus sit amet est placerat in egestas. Massa tincidunt nunc pulvinar sapien et ligula. Eu mi bibendum neque egestas congue quisque egestas diam in. Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Felis eget nunc lobortis mattis. Nulla aliquet enim tortor at auctor urna nunc. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ultrices dui sapien eget mi proin sed libero. Dictum sit amet justo donec. Massa tempor nec feugiat nisl pretium fusce.
 
 
-### Files NeedeD
+### Files Needed
 {: .text-gamma }
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Volutpat consequat mauris nunc congue nisi vitae. Quis blandit turpis cursus in hac habitasse. Vitae proin sagittis nisl rhoncus. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. In nulla posuere sollicitudin aliquam ultrices sagittis orci. Ultricies mi quis hendrerit dolor magna. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Lectus sit amet est placerat in egestas. Massa tincidunt nunc pulvinar sapien et ligula. Eu mi bibendum neque egestas congue quisque egestas diam in. Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Felis eget nunc lobortis mattis. Nulla aliquet enim tortor at auctor urna nunc. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ultrices dui sapien eget mi proin sed libero. Dictum sit amet justo donec. Massa tempor nec feugiat nisl pretium fusce.
