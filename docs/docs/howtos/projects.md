@@ -7,7 +7,7 @@ parent: How To's
 has_toc: false
 ---
 
-# Making a project in GitHub
+# Making a project for your team.
 {: .fs-9 }
 
 ## Table of Contents 
@@ -16,7 +16,7 @@ has_toc: false
 1. TOC
 {:toc}
 
-Projects are for large scale milestones, activities and task, that need documentation written as we move forward. Projects are considered rough drafts and has a great chance of changing struture once the project is marked "Complete", or is considered pasted a designated milestone. Find various templates needed under the "Projects" section of Templates, in this Github for basic information needed for the different project types. 
+Projects are large scale milestones, activities,and taskthat need documentation written. Projects are considered rough drafts and has a great chance of changing struture once the project is marked "Complete", or is considered pasted a designated milestone. Find various templates needed under the "Projects" section of Templates, in this Github for basic information needed for the different project types. 
 {: .fs-6 .fw-300 }
 ---
 
@@ -29,11 +29,15 @@ At the top of every project it should give a breif overview, provide goals, JIRA
 ### How to create/clone a template
 
 1. Logged into your local machine and in the github folder "Cleversafe\docs\templates\", you will just copy the folder into the "Projects" folder, and update the information in the files with your own. 
-```cp Cleversafe\docs\templates\[TEMPLATEFOLDERNAME] Cleversafe\docs\projects\[PROJECTNAME-JIRA\SNOW] 
+
+```bash
+cp Cleversafe\docs\templates\[TEMPLATEFOLDERNAME] Cleversafe\docs\projects\[PROJECTNAME-JIRA\SNOW] 
 ```
 
 2. The navigation menu is pulled from the headers of the files, to add yours edit the information as follows.
-```---
+
+```bash
+---
 layout: default
 title: [PROJECTNAME]
 nav_order: [NAVORDER#]
@@ -42,29 +46,38 @@ parent: Projects
 ---
 ```
 
-Read more on navigiation structure here, , you can have sections not display table of contents(ToC), as by default all "childern" in the navigiation structure have ToC on each page. You can disable this by adding to the header, 
+Learn more about [Navigation Structure]({{ site.baseurl }}{% link docs/howtos/documentation/navigation-structure.md %}) here. By default all "childern" in the navigiation structure have ToC displayed at the top of each page. You can disable this by adding this to the header, 
 
-```has_toc: false
+```bash
+has_toc: false
 
 Example:
 ---
 layout: default
 title: Squid Proxy
 nav_order: 1
-description: "Creating a reverse proxy to add LDAP authentication "
+description: "Creating a reverse proxy to add LDAP authentication to fulfill QOS requirements."
 parent: Projects
+has_toc: false
 ---
 ```
 
-You can also hide headers from the ToC by adding this line directly after the header.
-```{: .no_toc }
+You can also hide headers from the ToC by adding this line directly after the header you want to hide.
+
+```bash 
+{: .no_toc }
+
+Example:
+
+## How to connect LDAP
+{: .no_toc }
 ```
 
+<small>If you exclude the 'nav_order' item, it will go alphabetically after the projects that have the 'nav_order' and numbers listed.</small>
 
+### File Structure and adding "Folders" or Children
 
-<small></small>
-
-### Local installation: Use the gem-based theme
+Some templates will have children or drop down menus added to help reduce clutter, and add the workflow that fits best for the project. 
 
 1. Install the Ruby Gem
 ```bash

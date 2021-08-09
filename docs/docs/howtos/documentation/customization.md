@@ -5,8 +5,12 @@ parent: Document Formatting
 grand_parent: How To's
 ---
 
-# GitHub Customization
+# 'Just the Docs' Customization
 {: .no_toc }
+
+
+The theme we use 'Just the Docs' has some specific custimization parameters that can be defined in your Jekyll site's _config.yml file and HTML coding.
+{: .fs-6 .fw-300 }
 
 ## Table of contents
 {: .no_toc .text-delta }
