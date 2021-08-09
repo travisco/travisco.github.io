@@ -7,29 +7,62 @@ parent: How To's
 has_toc: false
 ---
 
-# Focus on writing good documentation
+# Making a project in GitHub
 {: .fs-9 }
 
-Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
+## Table of Contents 
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+Projects are for large scale milestones, activities and task, that need documentation written as we move forward. Projects are considered rough drafts and has a great chance of changing struture once the project is marked "Complete", or is considered pasted a designated milestone. Find various templates needed under the "Projects" section of Templates, in this Github for basic information needed for the different project types. 
 {: .fs-6 .fw-300 }
-
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/pmarsceill/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
-
 ---
 
 ## Getting started
 
-### Dependencies
+### Project Overview
 
-Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special plugins and can run on GitHub Pages' standard Jekyll compiler. The [Jekyll SEO Tag plugin](https://github.com/jekyll/jekyll-seo-tag) is included by default (no need to run any special installation) to inject SEO and open graph metadata on docs pages. For information on how to configure SEO and open graph metadata visit the [Jekyll SEO Tag usage guide](https://jekyll.github.io/jekyll-seo-tag/usage/).
+At the top of every project it should give a breif overview, provide goals, JIRA's, SNOW tickets or any other relevant information needed. A project should be updated on a regular basis. Anyone looking at a project should be able to understand any task needed to get to the current point in the project. Example: When setting up the squid proxy, we should have the installation details provided as to allow anyone to continue where you left off for whatever reason. Every template will start with a basic index page, folder or page structure, initial descriptions of what information to fill in, example images and so forth. 
 
-### Quick start: Use as a GitHub Pages remote theme
+### How to create/clone a template
 
-1. Add Just the Docs to your Jekyll site's `_config.yml` as a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/)
-```yaml
-remote_theme: pmarsceill/just-the-docs
+1. Logged into your local machine and in the github folder "Cleversafe\docs\templates\", you will just copy the folder into the "Projects" folder, and update the information in the files with your own. 
+```cp Cleversafe\docs\templates\[TEMPLATEFOLDERNAME] Cleversafe\docs\projects\[PROJECTNAME-JIRA\SNOW] 
 ```
-<small>You must have GitHub Pages enabled on your repo, one or more Markdown files, and a `_config.yml` file. [See an example repository](https://github.com/pmarsceill/jtd-remote)</small>
+
+2. The navigation menu is pulled from the headers of the files, to add yours edit the information as follows.
+```---
+layout: default
+title: [PROJECTNAME]
+nav_order: [NAVORDER#]
+description: "[BRIEFDESCRIPTION]"
+parent: Projects
+---
+```
+
+Read more on navigiation structure here, , you can have sections not display table of contents(ToC), as by default all "childern" in the navigiation structure have ToC on each page. You can disable this by adding to the header, 
+
+```has_toc: false
+
+Example:
+---
+layout: default
+title: Squid Proxy
+nav_order: 1
+description: "Creating a reverse proxy to add LDAP authentication "
+parent: Projects
+---
+```
+
+You can also hide headers from the ToC by adding this line directly after the header.
+```{: .no_toc }
+```
+
+
+
+<small></small>
 
 ### Local installation: Use the gem-based theme
 
