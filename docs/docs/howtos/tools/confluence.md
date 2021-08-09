@@ -6,7 +6,7 @@ parent: Tools
 grand_parent: How To's
 ---
 
-# Focus on writing good documentation
+# COS LB Squad Confluence
 {: .fs-9 }
 
 Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.

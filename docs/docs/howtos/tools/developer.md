@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Using IPAM
+title: Developer Tools
 description: "Provides details about how you might use IPAM in the COS LB squad."
 parent: Tools
 grand_parent: How To's
 ---
 
-# IPAM
+# Developer Tools
 {: .fs-9 }
 
 Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.

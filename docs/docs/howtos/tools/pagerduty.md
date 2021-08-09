@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Using IPAM
-description: "Provides details about how you might use IPAM in the COS LB squad."
+title: PagerDuty
+description: "How to use PagerDuty."
 parent: Tools
 grand_parent: How To's
 ---
 
-# IPAM
+# PagerDuty - Not just something used in the 80's - 90's
 {: .fs-9 }
 
 Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.

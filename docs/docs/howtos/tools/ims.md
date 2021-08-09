@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Using IPAM
-description: "Provides details about how you might use IPAM in the COS LB squad."
+title: IMS - Softlayer Internal System
+description: "Articles for commonly used parts of IMS in the COS load balancer squad. We assume you have basic knowledge of IMS and how to navigate through the menus and search."
 parent: Tools
 grand_parent: How To's
 ---
 
-# IPAM
+# IMS - Softlayer Internal Automated System
 {: .fs-9 }
 
 Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
