@@ -32,66 +32,87 @@ grand_parent: Projects
 ---
 
 #### Install Squid & Dependencies
+<div markdown="1">
+	1. Download the version of squid you want and store it in the directory. 
 
-1. Download the version of squid you want and store it in the directory. 
+	```bash
+	# cd /opt
 
-```bash
-# cd /opt
+	# wget http://www.squid-cache.org/Versions/v5/squid-5.1-20210804-r1f9e52827.tar.gz
 
-# wget http://www.squid-cache.org/Versions/v5/squid-5.1-20210804-r1f9e52827.tar.gz
+	# tar -xvf squid-5.1-20210804-r1f9e52827.tar.gz
+	```
 
-# tar -xvf squid-5.1-20210804-r1f9e52827.tar.gz
-```
+	2. Assuming you used version 5.1, change into the new directory created from un tarring the file and also build the configuration. Here is where we enable openssl and ssl-crtd, which is not in the standard squid package when installing from 'apt-get'. 
 
-2. Assuming you used version 5.1, change into the new directory created from un tarring the file. 
+	```bash
+	# cd squid-5.1/
 
-```bash
-# cd squid-5.1/
+	# apt-get install build-essential libssl-dev libffi-dev python3-dev cargo
 
-# apt-get install build-essential libssl-dev libffi-dev python3-dev cargo
+	# ./configure --prefix=/usr --localstatedir=/var --libexecdir=${prefix}/lib/squid --datadir=${prefix}/share/squid --sysconfdir=/etc/squid --with-default-user=proxy --with-logdir=/var/log --with-pidfile=/var/run/squid.pid --with-openssl --enable-ssl-crtd
+	```
 
-# ./configure --prefix=/usr --localstatedir=/var --libexecdir=${prefix}/lib/squid --datadir=${prefix}/share/squid --sysconfdir=/etc/squid --with-default-user=proxy --with-logdir=/var/log --with-pidfile=/var/run/squid.pid --with-openssl --enable-ssl-crtd
-```
+	3. Next we will create the self sign certification to use with openssl,
 
-3. Next we will create the self sign certification to use with openssl,
-```bash
-# openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -keyout bump.key -out bump.crt
+	```bash
+	# openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -keyout bump.key -out bump.crt
 
-# openssl x509 -in bump.crt -outform DER -out bump.der
+	# openssl x509 -in bump.crt -outform DER -out bump.der
 
-# openssl dhparam -outform PEM -out /etc/squid/bump_dhparam.pem 4096
+	# openssl dhparam -outform PEM -out /etc/squid/bump_dhparam.pem 4096
 
-# chown proxy:proxy /etc/squid/bump*
+	# chown proxy:proxy /etc/squid/bump*
 
-# chmod 400 /etc/squid/bump*
-```
+	# chmod 400 /etc/squid/bump*
+	```
 
-4. Create and initalize the DB for storing the certificetes
+	4. Create and initalize the DB for storing the certificetes
 
-```bash
-# mkdir -p /var/lib/squid
+	```bash
+	# mkdir -p /var/lib/squid
 
-# rm -rf /var/lib/squid/ssl_db
+	# rm -rf /var/lib/squid/ssl_db
 
-# /usr/lib/squid/security_file_certgen -c -s /var/lib/squid/ssl_db -M 20MB
+	# /usr/lib/squid/security_file_certgen -c -s /var/lib/squid/ssl_db -M 20MB
 
-# chown -R proxy:proxy /var/lib/squid
-```
+	# chown -R proxy:proxy /var/lib/squid
+	```
 
-5. The squid service was not in the system so I could not start it or stop it, so I found this file and made a minor adjustment to the path location for squid (add '/usr/lib' to the end of the path list),
+	5. The squid service was not in the system after installation, I found this file and made a minor adjustment to the path location for squid (add '/usr/lib' to the end of the path list),
 
-```bash
-/etc/init.d/squid
-```
+	```bash
+	# export $PATH:/usr/lib
 
-[Init.d Squid File](https://www.apt-browse.org/browse/ubuntu/xenial/main/amd64/squid/3.5.12-1ubuntu7/file/etc/init.d/squid){: .btn .btn-green }
+	# cd /etc/init.d/
+	```
+	
+	[Init.d Squid Direct File]({{ site.baseurl }}{% link assets/files/squid %}){: .btn .btn-green .mr-2 } [Init.d Squid File - Site](https://www.apt-browse.org/browse/ubuntu/xenial/main/amd64/squid/3.5.12-1ubuntu7/file/etc/init.d/squid){: .btn .btn-blue } 
+	
+	6. Next we need to put the LDAP authenticator into the correct folder for squid, for this build it was located under
+	
+	```bash
+	# /usr/lib/squid
+	```
+	
+	[basic_ldap_auth]({{ site.baseurl }}{% link assets/files/basic_ldap_auth %}){: .btn .btn-green }
 
-I did also have to add in the basic_ldap_auth to the server as well.
+	7. Load squid into the system. 
+	
+	```bash
+	# update-rc.d squid defaults
+	
+	# systemctl start squid
+	```
 
-[basic_ldap_auth]({{ site.baseurl }}{% link assets/files/basic_ldap_auth %}){: .btn .btn-green }
+</div>
 
-Then I issued these commands to load it into the system.
+#### Related Links
 
+https://support.kaspersky.com/KWTS/6.1/en-US/166244.htm
+http://www.squid-cache.org/Versions/v5/
+https://www.apt-browse.org/browse/ubuntu/xenial/main/amd64/squid/3.5.12-1ubuntu7/file/etc/init.d/squid
+https://scubarda.com/2020/03/23/configure-squid-proxy-for-ssl-tls-inspection-https-interception/
 
 ### Container
 {: .text-gamma }
