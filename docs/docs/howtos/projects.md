@@ -16,7 +16,7 @@ has_toc: false
 1. TOC
 {:toc}
 
-Projects are large scale milestones, activities,and taskthat need documentation written. Projects are considered rough drafts and has a great chance of changing struture once the project is marked "Complete", or is considered pasted a designated milestone. Find various templates needed under the "Projects" section of Templates, in this Github for basic information needed for the different project types. 
+Projects are large scale milestones, activities,and task. Project documentation are considered rough drafts, and have high chances of changing struture once the project is considered pasted a designated milestone. Find various templates needed under the "Projects" section of Templates, in this Github for basic information needed for the different project types. 
 {: .fs-6 .fw-300 }
 ---
 
@@ -34,27 +34,27 @@ At the top of every project it should give a breif overview, provide goals, JIRA
 cp Cleversafe\docs\templates\[TEMPLATEFOLDERNAME] Cleversafe\docs\projects\[PROJECTNAME-JIRA\SNOW] 
 ```
 
-2. The navigation menu is pulled from the headers of the files, to add yours edit the information as follows.
+1. The navigation menu is pulled from the headers of the files, to add yours edit the information as follows.
 
-```bash
+```
 ---
 layout: default
-title: [PROJECTNAME]
+title: [PROJECTNAME-JIRA/SNOW]
 nav_order: [NAVORDER#]
 description: "[BRIEFDESCRIPTION]"
 parent: Projects
 ---
 ```
 
-Learn more about [Navigation Structure]({{ site.baseurl }}{% link docs/howtos/documentation/navigation-structure.md %}) here. By default all "childern" in the navigiation structure have ToC displayed at the top of each page. You can disable this by adding this to the header, 
+Learn more about [Navigation Structure]({{ site.baseurl }}{% link docs/howtos/documentation/navigation-structure.md %}) here. By default all "childern" in the navigiation structure have ToC displayed at the top of each page. Disable this by adding the following to the header, 
 
-```bash
+```
 has_toc: false
 
 Example:
 ---
 layout: default
-title: Squid Proxy
+title: Squid Proxy - JIRA12345
 nav_order: 1
 description: "Creating a reverse proxy to add LDAP authentication to fulfill QOS requirements."
 parent: Projects
@@ -62,9 +62,9 @@ has_toc: false
 ---
 ```
 
-You can also hide headers from the ToC by adding this line directly after the header you want to hide.
+You can hide headers from the ToC by adding this line directly after the header you want to hide.
 
-```bash 
+```
 {: .no_toc }
 
 Example:
@@ -73,39 +73,46 @@ Example:
 {: .no_toc }
 ```
 
-<small>If you exclude the 'nav_order' item, it will go alphabetically after the projects that have the 'nav_order' and numbers listed.</small>
+If you exclude the 'nav_order' item, it will go alphabetically after the projects that have the 'nav_order' and numbers listed.
 
 ### File Structure and adding "Folders" or Children
 
 Some templates will have children or drop down menus added to help reduce clutter, and add the workflow that fits best for the project. 
+<div markdown="1">
+1. For projects with children pages you need to add the "has_children: true", "parent: <small>[TITLEOFPARENTPAGE]</small>" and the "grand_parent: <small>[TITLEOFGRANDPARENT]</small>" to the header. 
 
-1. Install the Ruby Gem
-```bash
-$ gem install just-the-docs
 ```
-```yaml
-# .. or add it to your your Jekyll site’s Gemfile
-gem "just-the-docs"
+Example:
+---
+layout: default
+title: Squid - Installation
+description: "How to install Squid Proxy through various means."
+parent: Squid Proxy - JIRA12345
+grand_parent: Projects
+has_children: true
+---
 ```
-2. Add Just the Docs to your Jekyll site’s `_config.yml`
-```yaml
-theme: "just-the-docs"
-```
-3. _Optional:_ Initialize search data (creates `search-data.json`)
-```bash
-$ bundle exec just-the-docs rake search:init
-```
-3. Run you local Jekyll server
-```bash
-$ jekyll serve
-```
-```bash
-# .. or if you're using a Gemfile (bundler)
-$ bundle exec jekyll serve
-```
-4. Point your web browser to [http://localhost:4000](http://localhost:4000)
+1. Once you have the initial structure done you can go through and replace all of the needed information. Any section wrapped with between two brakets '[ ]', and all CAPITAL letters in the name refers to information you need to replace with your own.
 
-If you're hosting your site on GitHub Pages, [set up GitHub Pages and Jekyll locally](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll) so that you can more easily work in your development environment.
+```
+Example: 
+
+layout: default
+title: [TITLEOFPAGE]
+nav_order: [NAVORDER#]
+description: "[BRIEFDESCRIPTION]"
+parent: Projects
+
+----
+
+layout: default
+title: Squid - Installation
+description: "How to install Squid Proxy through various means."
+parent: Squid Proxy - JIRA12345
+grand_parent: Projects
+has_children: true
+```
+</div>
 
 ### Configure Just the Docs
 
