@@ -42,7 +42,7 @@ grand_parent: Projects
 
 # tar -xvf squid-5.1-20210804-r1f9e52827.tar.gz
 ```
-2. Assuming you used version 5.1, change into the new directory created from un tarring the file and also build the configuration. Here is where we enable openssl and ssl-crtd, which is not in the standard squid package when installing from 'apt-get'. 
+1. Assuming you used version 5.1, change into the new directory created from un tarring the file and also build the configuration. Here is where we enable openssl and ssl-crtd, which is not in the standard squid package when installing from 'apt-get'. 
 
 ```bash
 # cd squid-5.1/
@@ -51,7 +51,7 @@ grand_parent: Projects
 
 # ./configure --prefix=/usr --localstatedir=/var --libexecdir=${prefix}/lib/squid --datadir=${prefix}/share/squid --sysconfdir=/etc/squid --with-default-user=proxy --with-logdir=/var/log --with-pidfile=/var/run/squid.pid --with-openssl --enable-ssl-crtd
 ```
-3. Next we will create the self sign certification to use with openssl,
+1. Next we will create the self sign certification to use with openssl,
 
 ```bash
 # openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -keyout bump.key -out bump.crt
@@ -64,7 +64,7 @@ grand_parent: Projects
 
 # chmod 400 /etc/squid/bump*
 ```
-4. Create and initalize the DB for storing the certificetes
+1. Create and initalize the DB for storing the certificetes
 
 ```bash
 # mkdir -p /var/lib/squid
@@ -75,7 +75,7 @@ grand_parent: Projects
 
 # chown -R proxy:proxy /var/lib/squid
 ```
-5. The squid service was not in the system after installation, I found this file and made a minor adjustment to the path location for squid (add '/usr/lib' to the end of the path list),
+1. The squid service was not in the system after installation, I found this file and made a minor adjustment to the path location for squid (add '/usr/lib' to the end of the path list),
 
 ```bash
 # export $PATH:/usr/lib
@@ -84,7 +84,7 @@ grand_parent: Projects
 ```
 
 [Init.d Squid Direct File]({{ site.baseurl }}{% link assets/files/squid %}){: .btn .btn-green .mr-2 } [Init.d Squid File - Site](https://www.apt-browse.org/browse/ubuntu/xenial/main/amd64/squid/3.5.12-1ubuntu7/file/etc/init.d/squid){: .btn .btn-blue } 
-6. Next we need to put the LDAP authenticator into the correct folder for squid, for this build it was located under
+1. Next we need to put the LDAP authenticator into the correct folder for squid, for this build it was located under
 
 ```bash
 # /usr/lib/squid
