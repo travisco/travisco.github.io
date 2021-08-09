@@ -8,7 +8,7 @@ parent: Administrative
 # Load Balancer Information
 {: .fs-9 }
 
-Diagrams and charts for the load balancer squad.
+Load balancer information regarding total, names, naming scheme, and other items.
 {: .fs-6 .fw-300 }
 
 ---

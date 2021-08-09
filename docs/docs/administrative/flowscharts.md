@@ -8,7 +8,7 @@ parent: Administrative
 # Diagrams - Flowcharts
 {: .fs-9 }
 
-Diagrams and charts for the load balancer squad.
+Diagrams and flowcharts 
 {: .fs-6 .fw-300 }
 
 ---

@@ -8,7 +8,7 @@ parent: Administrative
 # Quarterly Review
 {: .fs-9 }
 
-Diagrams and charts for the load balancer squad.
+Process for the quarterly review.
 {: .fs-6 .fw-300 }
 
 ---
