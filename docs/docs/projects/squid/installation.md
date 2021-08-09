@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Installation
+description: "Squid Proxy installation."
 parent: Squid - JIRA12345
 grand_parent: Projects
 ---
