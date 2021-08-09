@@ -112,7 +112,15 @@ grand_parent: Projects
 # cp /tmp/squid-baremetal.conf /etc/squid/squid.conf
 ```
 
-This configuration file contains the needed
+1. Upload squid into the system defaults
+
+```bash
+# update-rc.d squid defaults
+
+# systemctl start squid
+```
+
+This configuration file contains the needed LDAP authentication for COS. You can use this article to test it out with your information. 
 
 ##### Related Links
 
