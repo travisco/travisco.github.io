@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Customization
-description: "Squid Proxy server POC."
+description: "Squid Proxy Customzation Options."
 parent: Squid - JIRA12345
 grand_parent: Projects
 ---
