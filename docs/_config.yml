@@ -108,7 +108,7 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 # Aux links for the upper right navigation
 aux_links:
   "All COS Groups":
-    - "//github.com/pmarsceill/just-the-docs"
+    - "https://confluence.softlayer.local/display/STORAGE/Cloud+Object+Storage+Squads"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
