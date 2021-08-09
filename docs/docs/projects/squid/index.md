@@ -27,6 +27,6 @@ The Squid systems are currently running at a hit-rate of approximately 75%, effe
 #### Want to learn more?
 The Squid project provides a number of resources to assist users design, implement and support Squid installations. Please browse the Documentation and Support sections for more information.
 
-[Squid Proxy](https://squid-cache.org){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
+[Squid Proxy](http://www.squid-cache.org){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
 
 ---
