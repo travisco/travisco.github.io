@@ -3,7 +3,7 @@ layout: default
 title: Access Request's
 nav_order: 3
 description: "Provides details about how you can request access hub access."
-parent: How To's
+parent: Administrative
 has_toc: false
 ---
 
