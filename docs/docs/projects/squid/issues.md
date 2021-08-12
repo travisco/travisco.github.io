@@ -2,7 +2,7 @@
 layout: default
 title: Issues
 description: "Squid Proxy issues."
-parent: Squid - JIRA12345
+parent: Squid Proxy
 grand_parent: Projects
 ---
 

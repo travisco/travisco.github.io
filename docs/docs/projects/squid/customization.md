@@ -2,7 +2,7 @@
 layout: default
 title: Customization
 description: "Squid Proxy Customzation Options."
-parent: Squid - JIRA12345
+parent: Squid Proxy
 grand_parent: Projects
 ---
 
