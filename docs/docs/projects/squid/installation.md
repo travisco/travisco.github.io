@@ -32,9 +32,9 @@ grand_parent: Projects
 ---
 
 ##### Install Squid & Dependencies
-
+<div>
 1. Download the version of squid you want and store it in the directory. 
-
+</div>
 
 ```bash
 # cd /opt
@@ -141,14 +141,40 @@ This configuration file contains the needed LDAP authentication for COS. You can
 
 ##### Related Links
 
-https://support.kaspersky.com/KWTS/6.1/en-US/166244.htm
-http://www.squid-cache.org/Versions/v5/
-https://www.apt-browse.org/browse/ubuntu/xenial/main/amd64/squid/3.5.12-1ubuntu7/file/etc/init.d/squid
-https://scubarda.com/2020/03/23/configure-squid-proxy-for-ssl-tls-inspection-https-interception/
+[Kaspersky](https://support.kaspersky.com/KWTS/6.1/en-US/166244.htm)
+[Squid Cache](http://www.squid-cache.org/Versions/v5/)
+[Apt Browse](https://www.apt-browse.org/browse/ubuntu/xenial/main/amd64/squid/3.5.12-1ubuntu7/file/etc/init.d/squid)
+[Scubarda]https://scubarda.com/2020/03/23/configure-squid-proxy-for-ssl-tls-inspection-https-interception/)
 
 #### Container
 {: .text-gamma }
 
 ##### Prerequisites
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Volutpat consequat mauris nunc congue nisi vitae. Quis blandit turpis cursus in hac habitasse. Vitae proin sagittis nisl rhoncus. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. In nulla posuere sollicitudin aliquam ultrices sagittis orci. Ultricies mi quis hendrerit dolor magna. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Lectus sit amet est placerat in egestas. Massa tincidunt nunc pulvinar sapien et ligula. Eu mi bibendum neque egestas congue quisque egestas diam in. Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Felis eget nunc lobortis mattis. Nulla aliquet enim tortor at auctor urna nunc. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ultrices dui sapien eget mi proin sed libero. Dictum sit amet justo donec. Massa tempor nec feugiat nisl pretium fusce.
+* Docker: 
+
+We are using salrashid123/squidproxy version 3.5.27. 
+
+[GitHub](https://github.com/salrashid123/squid_proxy){: .btn .btn-black .mr-2 } [Docker Hub](https://hub.docker.com/r/salrashid123/squidproxy/){: .btn .btn-blue } 
+
+
+##### Install Squid & Container
+
+1. Curl command to hit the squid proxy
+
+```bash
+curl -v --proxy-cacert /home/trpotter/squid/apps/sl/CA_crt.pem --cacert /home/trpotter/squid/apps/sl/CA_crt.pem -x "cos-ldaptest1:<mypassword>@:osscosbperfuatwdc0602f:3128"  https://www.yahoo.com
+```
+
+2. Command to launch the container
+
+```bash
+docker run -d -p 3128:3128 \
+--volume /home/trpotter/squid/apps/squid.conf.intercept:/apps/squid.conf.intercept \
+--volume /home/trpotter/squid/apps/sl/basic_ldap_auth:/apps/squid/libexec/basic_ldap_auth \
+--volume /home/trpotter/squid/apps/sl/ldap_password:/apps/ldap_password \
+--volume /home/trpotter/squid/apps/sl/CA_crt.pem:/apps/CA_crt.pem \
+--volume /home/trpotter/squid/apps/sl/CA_key.pem:/apps/CA_key.pem \
+--volume /home/trpotter/squid/apps/sl/:/apps/sl/ docker.io/salrashid123/squidproxy /apps/squid/sbin/squid -NsY -d 2/* -f /apps/squid.conf.intercept
+```
+
