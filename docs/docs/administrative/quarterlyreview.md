@@ -7,6 +7,7 @@ parent: Administrative
 
 # Quarterly Review
 {: .fs-9 }
+
 | Runbook Details      |                      |                      |                      |
 |:---------------------|:---------------------|:---------------------|:---------------------|
 | Category             | Operational          | Audience             | COS Delivery         |
@@ -31,7 +32,7 @@ On the Configuration Tab under System > Diagnostics are several tools for workin
 
 to the current running configuration and commands can be generated from this report to roll back changes if necessary.  Additional tools are available to compare saved vs running configurations.  
 
-![](assets/imgs/quarterlyreview01.png)
+![](https://github.com/travisco/travisco.github.io/blob/main/docs/assets/img/quarterlyreview01.png)
 
 ### Backup of COS running configuration via scripting
 
