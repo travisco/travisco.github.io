@@ -141,10 +141,10 @@ This configuration file contains the needed LDAP authentication for COS. You can
 
 ##### Related Links
 
-[Kaspersky](https://support.kaspersky.com/KWTS/6.1/en-US/166244.htm)
-[Squid Cache](http://www.squid-cache.org/Versions/v5/)
-[Apt Browse](https://www.apt-browse.org/browse/ubuntu/xenial/main/amd64/squid/3.5.12-1ubuntu7/file/etc/init.d/squid)
-[Scubarda]https://scubarda.com/2020/03/23/configure-squid-proxy-for-ssl-tls-inspection-https-interception/)
+[Kaspersky](https://support.kaspersky.com/KWTS/6.1/en-US/166244.htm) -- 
+[Squid Cache](http://www.squid-cache.org/Versions/v5/) -- 
+[Apt Browse](https://www.apt-browse.org/browse/ubuntu/xenial/main/amd64/squid/3.5.12-1ubuntu7/file/etc/init.d/squid) -- 
+[Scubarda](https://scubarda.com/2020/03/23/configure-squid-proxy-for-ssl-tls-inspection-https-interception/) -- 
 
 #### Container
 {: .text-gamma }
