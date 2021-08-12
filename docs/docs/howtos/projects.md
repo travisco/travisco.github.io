@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Make A Project
+title: Add a Project
 nav_order: 2
-description: "Provides details about how you can create a new project to be added to our documentation. "
+description: "Provides details about how you can create a new project into your squads docuemtnation page, add it to the navigation menu, and tips on formatting. "
 parent: How To's
 has_toc: false
 ---
@@ -28,18 +28,18 @@ At the top of every project it should give a breif overview, provide goals, JIRA
 
 ### How to create/clone a template
 
-1. Logged into your local machine and in the github folder "Cleversafe\docs\templates\", you will just copy the folder into the "Projects" folder, and update the information in the files with your own. 
+2. Logged into your local machine and in the github folder "Cleversafe\docs\templates\", you will just copy the folder into the "Projects" folder, and update the information in the files with your own. 
 
 ```bash
-cp Cleversafe\docs\templates\[TEMPLATEFOLDERNAME] Cleversafe\docs\projects\[PROJECTNAME-JIRA\SNOW] 
+cp Cleversafe\docs\templates\[TEMPLATEFOLDERNAME] Cleversafe\docs\projects\[PROJECTNAME] 
 ```
 
-1. The navigation menu is pulled from the headers of the files, to add yours edit the information as follows.
+2. The navigation menu is pulled from the headers of the files, to add yours edit the information as follows.
 
 ```
 ---
 layout: default
-title: [PROJECTNAME-JIRA/SNOW]
+title: [PROJECTNAME]
 nav_order: [NAVORDER#]
 description: "[BRIEFDESCRIPTION]"
 parent: Projects
@@ -54,7 +54,7 @@ has_toc: false
 Example:
 ---
 layout: default
-title: Squid Proxy - JIRA12345
+title: Squid Proxy
 nav_order: 1
 description: "Creating a reverse proxy to add LDAP authentication to fulfill QOS requirements."
 parent: Projects
@@ -79,7 +79,7 @@ If you exclude the 'nav_order' item, it will go alphabetically after the project
 
 Some templates will have children or drop down menus added to help reduce clutter, and add the workflow that fits best for the project. 
 <div markdown="1">
-1. For projects with children pages you need to add the "has_children: true", "parent: <small>[TITLEOFPARENTPAGE]</small>" and the "grand_parent: <small>[TITLEOFGRANDPARENT]</small>" to the header. 
+2. For projects with children pages you need to add the "has_children: true", "parent: <small>[TITLEOFPARENT]</small>" and the "grand_parent: <small>[TITLEOFGRANDPARENT]</small>" to the header. 
 
 ```
 Example:
@@ -87,12 +87,12 @@ Example:
 layout: default
 title: Squid - Installation
 description: "How to install Squid Proxy through various means."
-parent: Squid Proxy - JIRA12345
+parent: Squid Proxy
 grand_parent: Projects
 has_children: true
 ---
 ```
-1. Once you have the initial structure done you can go through and replace all of the needed information. Any section wrapped with between two brakets '[ ]', and all CAPITAL letters in the name refers to information you need to replace with your own.
+2. Once you have the initial structure done you can go through and replace all of the needed information. Any section wrapped with between two brakets '[ ]', and all CAPITAL letters in the name refers to information you need to replace with your own.
 
 ```
 Example: 
@@ -108,7 +108,7 @@ parent: Projects
 layout: default
 title: Squid - Installation
 description: "How to install Squid Proxy through various means."
-parent: Squid Proxy - JIRA12345
+parent: Squid Proxy
 grand_parent: Projects
 has_children: true
 ```
