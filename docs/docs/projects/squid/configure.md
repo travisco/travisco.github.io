@@ -142,3 +142,60 @@ proxy_password =
 
 ### Ubuntu / Debian
 
+#### Set System-Wide Proxy settings on CLI
+
+
+We will add a shell script file under /etc/profile.d/proxy.sh. This will ensure the settings apply to all logged-in users.
+
+
+```bash
+sudo nano  /etc/profile.d/proxy.sh
+```
+
+Populate your proxy values.
+
+```bash
+# set proxy config via profie.d - should apply for all users
+# 
+export http_proxy="http://[IPADDRESSPROXY]:3128/"
+export https_proxy="http://[IPADDRESSPROXY]:3128/"
+export ftp_proxy="http://[IPADDRESSPROXY]:3128/"
+export no_proxy="127.0.0.1,localhost"
+
+# For curl
+export HTTP_PROXY="http://[IPADDRESSPROXY]:3128/"
+export HTTPS_PROXY="http://[IPADDRESSPROXY]:3128/"
+export FTP_PROXY="http://[IPADDRESSPROXY]:3128/"
+export NO_PROXY="127.0.0.1,localhost"
+```
+
+
+Add other IPs you want to exclude from proxy to NO_PROXY & no_proxy environment variable.
+
+Make it executable.
+
+```bash
+sudo chmod +x  /etc/profile.d/proxy.sh
+```
+
+
+Source the file to start using the proxy settings, or alternatively logout and back in.
+
+```bash
+$ source /etc/profile.d/proxy.sh
+```
+
+Confirm:
+
+```bash
+$ env | grep -i proxy
+```
+
+#### Set proxy for APT package manager
+
+
+The above settings will work for Applications and command-line tools. If you want to set proxy only for the APT package manager, configure like below.
+
+```bash
+
+```
