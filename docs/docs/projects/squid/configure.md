@@ -95,6 +95,7 @@ $ env | grep -i proxy
 ```
 
 
+
 #### Set proxy for YUM|DNF package manager
 
 
@@ -106,6 +107,7 @@ $ sudo vim /etc/dnf/dnf.conf
 proxy=http://USERNAME:PASSWORD@[IPADDRESSPROXY]:3128/
 
 ```
+
 
 
 #### For CentOS 6/7:
@@ -136,4 +138,7 @@ proxy_username=
 proxy_password =
 ```
 
-#### Ubuntu / Debian 
+
+
+### Ubuntu / Debian
+
