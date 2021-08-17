@@ -27,7 +27,6 @@ Verify no proxy is currently set, if one is please consult with the system admin
 
 ```bash
 # echo $http_proxy
-
 ```
 
 
@@ -35,7 +34,6 @@ Once you have your user added to the AD groups, if not please get with your lead
 
 ```bash
 # export http_proxy=http://USERNAME:PASSWORD@[IPADDRESSPROXY]:3128/
-
 ```
 
 
@@ -43,7 +41,6 @@ If your password has special characters, literal backslash characters (\) need t
 
 ```bash
 # export http_proxy=http://USERNAME\#01:PASSWORD@[IPADDRESSPROXY]:3128/
-
 ```
 
 
@@ -51,7 +48,6 @@ When the username or password uses the @ symbol, add a backslash (\) before the 
 
 ```bash
 # export http_proxy=http:\\USERN\@ME:PASSWORD@[IPADDRESSPROXY]:3128
-
 ```
 
 
@@ -62,7 +58,6 @@ We will add a shell script file under /etc/profile. This will ensure the setting
 
 ```bash
 sudo vi /etc/profile
-
 ```
 
 
@@ -83,7 +78,6 @@ export HTTP_PROXY="$PROXY_URL"
 export HTTPS_PROXY="$PROXY_URL"
 export FTP_PROXY="$PROXY_URL"
 export NO_PROXY="127.0.0.1,localhost"
-
 ```
 
 
@@ -91,7 +85,6 @@ Source the file when done to start using the proxy settings, or alternatively lo
 
 ```bash
 $ source /etc/profile
-
 ```
 
 
@@ -99,7 +92,6 @@ Confirm via
 
 ```bash
 $ env | grep -i proxy
-
 ```
 
 
@@ -123,7 +115,6 @@ You will set the username and password in the rhsm.conf file, but just enter the
 ```bash
 $ sudo vim /etc/yum.conf
 proxy=http://[IPADDRESSPROXY]:3128/
-
 ```
 
 For RHEL users, you’ll also need to set Proxy for accessing RHSM content:
@@ -133,7 +124,6 @@ $ sudo vi /etc/rhsm/rhsm.conf
 # Configure
 proxy_hostname = proxy.example.com
 proxy_port = 8080
-
 ```
 
 If your proxy server requires authentication, also set
@@ -144,6 +134,6 @@ proxy_username=
 
 # password for basic http proxy auth, if needed
 proxy_password =
-
 ```
 
+#### Ubuntu / Debian 
