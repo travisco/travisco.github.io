@@ -10,9 +10,9 @@ parent: Administrative
 
 | Runbook Details      |                      |                      |                      |
 |:---------------------|:---------------------|:---------------------|:---------------------|
-| **Category**             | Operational          | **Audience**             | COS Delivery         |
-| **Reviewers**            | See Reviewers table  | **Owner**                | Load Balancing Squad |
-| **Monitoring Alert**     | NA                   |                      |                      |
+| **Category**         | Operational          | **Audience**         | COS Delivery         |
+| **Reviewers**        | See Reviewers table  | **Owner**            | Load Balancing Squad |
+| **Monitoring Alert** | NA                   |                      |                      |
 
 ---
 

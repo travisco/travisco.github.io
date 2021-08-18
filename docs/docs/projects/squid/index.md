@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Squid Proxy
-description: "Squid Proxy server POC."
+description: "Squid Proxy server POC.  F1740 FSC SC-7-8"
 parent: Projects
 has_children: true
 ---
 
 
-# Squid Proxy Server
+# Squid Proxy - F1740 FSC SC-7-8
 {: .no_toc }
 
 ---
