@@ -105,7 +105,7 @@ The UAT testing ID can be found in Thycotic HERE.  If you do not have access to 
 
 ##### TESTING REQUIREMENTS:
 
--- Proxy Expects to see a proper RFC 7235 HTTP header in the GET request. Example:  Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+-- Proxy Expects to see a proper RFC 7235 HTTP header in the GET request. Example:  Proxy-Authorization: Basic LcBGHn72rg92X5n8
 
 
 -- Hashed information in header is "username:password" using the service credentials created for the proxy. 
