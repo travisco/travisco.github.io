@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Configure
+title: Configure Proxy
 description: "Squid Proxy configuration to use as a proxy."
 parent: Squid Proxy
 grand_parent: Projects
+nav_order: 99
 ---
 
 # Squid - Configure squid as proxy
@@ -19,6 +20,18 @@ grand_parent: Projects
 
 ### Proxy configuration on RHEL / CentOS / Fedora
 
+List of Squid Proxies
+
+| Runbook Details      | Hostname             | IP Address           |
+|:---------------------|:---------------------|:---------------------|
+| **US South**         | ossproxylbdal1001    | 172.11.22.33:3128    |
+| **US East**          | ossproxylbsjc0301    | 173.22.33.44:3128    |
+| **US Cross Region**  | ossproxylbwdc0401    | 174.33.44.55:3128    |
+
+
+### Request AD User Access
+
+To be filled in.
 
 #### Configuring proxy through the CLI
 
