@@ -32,9 +32,9 @@ grand_parent: Projects
 ---
 
 ##### Install Squid & Dependencies
-<div>
+
 1. Download the version of squid you want and store it in the directory. 
-</div>
+
 
 ```bash
 # cd /opt
