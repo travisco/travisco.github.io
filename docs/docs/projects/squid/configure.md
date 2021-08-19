@@ -225,7 +225,7 @@ For RHEL users, you’ll also need to set Proxy for accessing RHSM content:
 $ sudo vi /etc/rhsm/rhsm.conf
 # Configure
 proxy_hostname = proxy.example.com
-proxy_port = 8080
+proxy_port = 3128
 ```
 
 If your proxy server requires authentication, also set
